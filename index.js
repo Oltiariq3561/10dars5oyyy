@@ -14,6 +14,7 @@
 
 
 // UYGA VAZIFA 
+
 const text = document.querySelector('#new-todo');
 const button = document.querySelector('#add-btn');
 const tayyor = document.querySelector('#tayyor');
@@ -25,7 +26,23 @@ button && button.addEventListener('click', function(event) {
     if (text.value.length != 0) {
         tayyor.append(text.value);
         text.value = ' '
+        text.focus();
+        text.style.outline = 'blue'
     }else{
     alert('input bosh');
     }
+});
+
+ochir && ochir.addEventListener('click', function(event) {
+    event.preventDefault();
+
+   
 })
+
+const btn = document.getElementById('showMessageButton')
+
+btn && btn.addEventListener('click', () => {
+    setTimeout(() => {
+        document.getElementById('message').style.display = 'block';
+    }, 5000); // 5 soniya
+});
